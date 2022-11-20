@@ -1,0 +1,16 @@
+<%- include('includes/head.ejs',{title: "Blog"}) %> 
+</head>
+<body>
+  <%- include('includes/header.ejs') %> 
+  <div>
+    <ul id="postsList">
+     <% posts.forEach((post)=>{ %>
+      <div class="postHolder">
+        <li class="post"><%= post.post %></li>
+        <a href="/post/<%= post._id %> ">View Post</a>
+      </div>
+     <%  }) %>
+    </ul> 
+  </div>
+</body>
+</html>

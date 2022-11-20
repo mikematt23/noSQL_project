@@ -1,0 +1,19 @@
+<%- include('includes/head.ejs',{title: "Blog"}) %> 
+<link rel="stylesheet" href="/sign-up.css">
+</head>
+<body>
+  <%- include('includes/header.ejs') %> 
+  <section>
+   <h2>Welcome Back <%= user.firstName %> </h2>
+   <form action="posts" method="post">
+    <div>
+      <label for="post">Post</label>
+      <input type="text" id="post" name="post">
+    </div>
+    <div>
+      <button>Submit</button>
+    </div>
+   </form>
+  </section>
+</body>
+</html>

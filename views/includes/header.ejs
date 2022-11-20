@@ -1,0 +1,23 @@
+<header>
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <% if(locals.isAdmin){ %> 
+      <li><a href="/admin">Admin</a></li>
+      <% } %> 
+      <% if(locals.nav = true){ %> 
+      <li><a href="/signUp">Sign-Up</a></li>
+      <li><a href="/login">Log-In</a></li>
+      <% } %> 
+      <% if(locals.loggedIn){ %> 
+      <li><a href="/user">Profile</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li>
+        <form action="/logOut" method="post">
+          <button>Log-out</button>
+        </form>
+      </li>
+      <%  }%> 
+    </ul>
+  </nav>  
+</header>
